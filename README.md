@@ -10,10 +10,10 @@ The famous snake game. It was created using JavaScript/TypeScript. The game has 
 
 ## Game Controls
 - Control snake:
- - **W / ArrowUp** -> Up
- - **A / ArrowLeft** -> Left
- - **S / ArrowDown** -> Down
- - **D / ArrowRight** -> Right
+   - **W / ArrowUp** -> Up
+   - **A / ArrowLeft** -> Left
+   - **S / ArrowDown** -> Down
+   - **D / ArrowRight** -> Right
 - **ESC** -> Pause the game. Only works when the game starts.
 
 ## Setting Game
