@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="dist/assets/img/snake.png">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Snake Game &#x1f40d</title>
+</head>
+<body>
+    <div class="containterMenu">
+        <div class="bgCircle">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+        <div class="menuGame start">
+        <h2 class="menuGame-title">Snake Game</h2>
+            <div class="menuGame-btn">
+                <button id="play" type="button">Play!</button>
+                <button id="setting" type="button">Setting</button>
+            </div>
+        </div>
+        <div class="menuGame stop">
+        <h2 class="menuGame-title">Pause Game</h2>
+        <h3 class="menuGame-score">SCORE: <span class="point">0</span></h3>
+            <div class="menuGame-btn">
+                <button id="resume" type="button">Resume</button>
+                <button id="exit" type="button">Exit</button>
+            </div>
+        </div>
+        <div class="menuGame setting">
+        <h2 class="menuGame-title">Setting Game</h2>
+            <div class="menuGame-setting">
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="fps">Speed</label>
+                    <input class="menuGame-setting-range" type="range" name="FPS" id="fps" value="7" min="1" max="20" step="1">
+                    <span class="menuGame-setting-value">0</span>
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="gap">Gap size</label>
+                    <input class="menuGame-setting-range" type="range" name="sizeGap" id="gap" value="0" min="0" max="10" step="1">
+                    <span class="menuGame-setting-value">0</span>
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="field">Field size</label>
+                    <input class="menuGame-setting-range" type="range" name="sizeField" id="field" value="40" min="20" max="100" step="5">
+                    <span class="menuGame-setting-value">0</span>
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="board">Board size</label>
+                    <input class="menuGame-setting-range" type="range" name="sizeBoard" id="board" value="600" min="200" max="860" step="10">
+                    <span class="menuGame-setting-value">0</span>
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="colorBoard">Color board</label>
+                    <input class="menuGame-setting-color" type="color" name="colorBoard" id="colorBoard" value="#1a53ff">
+                    <input class="menuGame-setting-color" type="color" name="colorBoard" id="colorBoard" value="#1a03ff">
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="colorSnake">Color snake</label>
+                    <input class="menuGame-setting-color" type="color" name="colorSnake" id="colorSnake" value="#00ff00">
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="colorFood">Color Food</label>
+                    <input class="menuGame-setting-color" type="color" name="colorFood" id="colorFood" value="#ff0000">
+                </div>
+                <div class="menuGame-setting-box">
+                    <label class="menuGame-setting-text" for="border">Border board</label>
+                    <label class="toggler-wrapper">
+                        <input class="menuGame-setting-checkbox" type="checkbox" name="borderBoard" id="border">
+                        <div class="toggler-slider">
+                            <div class="toggler-knob"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="menuGame-btn">
+                <button id="save" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="containerGame">
+        <h3 class="score">SCORE: <span class="point">0</span></h3>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="dist/app.js"></script>
+</body>
+</html>

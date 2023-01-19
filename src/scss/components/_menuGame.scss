@@ -1,0 +1,127 @@
+@use '../abstracts' as *;
+
+.menuGame {
+    position: absolute;
+    width: 40rem;
+    height: 45rem;
+    top: 50%;
+    left: 50%;
+    padding: 3rem 3.5rem;
+    border: .1rem solid $color_white;
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4rem rgba(8, 7, 16, .6);
+    z-index: 10;
+
+    &-title {
+        color: $color_white;
+        text-shadow: -.1rem -.1rem 0 $color_black, .1rem -.1rem 0 $color_black, -.1rem .1rem 0 $color_black, .1rem .1rem 0 $color_black;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto 1.5rem;
+            background: url("../assets/img/snake.png");
+            background-size: 10rem;
+            border-radius: 50%;
+            box-shadow: .7rem .7rem 2rem #49A0AE, -.7rem -.7rem 2rem #49A0AE;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6rem;
+    }
+
+    &.stop {
+        display: none;
+    }
+
+    &.setting {
+        display: none;
+    }
+
+    &-score {
+        color: $color_white;
+    }
+
+    // Menu setting
+    &.setting {
+        width: 70rem;
+        height: 57rem;
+
+        .menuGame-title::before {
+            display: none;
+        }
+
+        .menuGame-btn {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .menuGame-setting {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        &-box {
+            margin: 2rem auto 0;
+
+            //Grid one column
+            @for $i from 1 through 4 {
+                &:nth-of-type(#{$i}) {
+                    grid-area: #{$i} / 1 / #{$i + 1} / 2;
+                }
+            }
+
+            //Grid two column
+            @for $i from 5 through 8 {
+                &:nth-of-type(#{$i}) {
+                    grid-area: #{$i - 4} / 2 / #{$i - 3} / 3;
+                    text-align: center;
+                }
+            }
+        }
+
+        &-text {
+            display: block;
+            margin-bottom: .5rem;
+            color: $color_white;
+            text-shadow: -.1rem -.1rem 0 $color_black, .1rem -.1rem 0 $color_black, -.1rem .1rem 0 $color_black, .1rem .1rem 0 $color_black;
+        }
+
+        &-value {
+            display: inline-block;
+            position: relative;
+            width: 5rem;
+            line-height: 2rem;
+            margin-left: 1.5rem;
+            padding: .5rem 0;
+            border: none;
+            border-radius: .75rem;
+            text-align: center;
+            font-size: 2rem;
+            color: $color_white;
+            background-color: $color_inputRange;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: .8rem;
+                left: -.7rem;
+                width: 0;
+                height: 0;
+                border-top: .7rem solid transparent;
+                border-right: .7rem solid $color_inputRange;
+                border-bottom: .7rem solid transparent;
+            }
+        }
+    }
+}

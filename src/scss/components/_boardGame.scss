@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.containerGame {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.score {
+    position: absolute;
+    top: -2.5rem;
+    color: $color_white;
+}
+
+canvas {
+    border: .1rem solid $color_white;
+}

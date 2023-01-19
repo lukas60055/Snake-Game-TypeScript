@@ -1,0 +1,33 @@
+{
+  "name": "snake-game-typescript",
+  "version": "1.0.0",
+  "description": "A snake game written using TypeScript as part of learning.",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc && sass src/scss/style.scss dist/css/style.css && copyfiles -u 1 src/assets/*/* dist/",
+    "watchTSC": "tsc --watch",
+    "watchSASS": "sass --watch src/scss/style.scss dist/css/style.css",
+    "rm": "rm -rf ./dist/",
+    "prod": "tsc && sass --no-source-map src/scss/style.scss dist/css/style.css && copyfiles -u 1 src/assets/*/* dist/",
+    "server": "http-server ./"
+  },
+  "author": {
+		"name": "Łukasz Duda",
+		"email": "lukas60055@gmail.com"
+	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukas60055/Snake-Game-TypeScript"
+  },
+  "bugs": {
+    "url": "https://github.com/lukas60055/Snake-Game-TypeScript/issues"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  },
+  "dependencies": {
+    "copyfiles": "2.4.1",
+    "sass": "1.57.1",
+    "typescript": "4.9.4"
+  }
+}

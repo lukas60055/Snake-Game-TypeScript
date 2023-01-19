@@ -1,0 +1,44 @@
+// 1. Colors
+// =================================
+$color1: #fff;
+$color2: #000;
+$color3: #282828;
+$color4: #1845ad;
+$color5: #23a2f6;
+$color6: #ff512f;
+$color7: #f09819;
+$color8: #080710;
+$color9: #2ab37c;
+$color10: #2c3e50;
+$color11: #1abc9c;
+$color12: #ccc;
+$color13: #44cc66;
+
+$color_white: $color1;
+$color_black: $color2;
+
+// Colors: Background body
+$color_body-bg: $color3;
+
+// Colors: Circle background
+$color_circleBlue-gradient: $color4, $color5;
+$color_circleOrange-gradient: $color6, $color7;
+
+// Colors: button
+$color_btn-text: $color8;
+$color_btn-hover: $color9;
+
+// Colors: input range
+$color_inputRange: $color10;
+$color_inputRange-hover: $color11;
+
+// Colors: input checkbox
+$color_inputCheckbox-slider: $color12;
+$color_inputCheckbox-checked: $color13;
+
+
+// 2. Font
+// =================================
+$fontSize-root: 10px;
+
+$fontFamily: 'Poppins', sans-serif;

@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+button {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: $color_white;
+    color: $color_btn-text;
+    padding: 1.5rem 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+
+    &:hover {
+        background-color: $color_btn-hover;
+        box-shadow: 0 1.5rem 2rem rgba(38, 177, 122, .4);
+        color: $color_white;
+        transform: translateY(-.5rem);
+    }
+}
