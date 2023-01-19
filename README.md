@@ -35,7 +35,7 @@ The following values can be changed in the menu:
 ## Installation and Run
 #### 1. Clone the repo
    ```sh
-   git clone https://github.com/lukas60055/asdasdasdasda
+   git clone https://github.com/lukas60055/Snake-Game-TypeScript
    ```
 #### 2. Install NPM packages
    ```sh
